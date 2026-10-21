@@ -244,11 +244,15 @@ const PROJECTS = [
    text:'Многостраничный магазин без фреймворков: каталог, карточка товара, корзина и оформление заказа.',
    feats:['Поиск, фильтр по категориям и скидкам, сортировка','Выбор цвета товара с живым превью','Корзина в localStorage, промокоды, расчёт доставки'],
    stack:['HTML','CSS','JavaScript'], demo:true},
+  {repo:'biblioteka-api', kind:'backend', label:'Java · Spring Boot', title:'Библиотека API: выдачи, штрафы и очередь на книги',
+   text:'REST API на Spring Boot 3 и PostgreSQL: каталог, читатели, выдачи с продлением, штрафы за просрочку и очередь бронирования с отложенными экземплярами.',
+   feats:['JWT, роли библиотекаря и читателя, ошибки в формате RFC 7807','Блокировка книги при выдаче, схема через Flyway','Сквозной тест на PostgreSQL в Testcontainers'],
+   stack:['Java 21','Spring Boot 3','PostgreSQL','Flyway','Docker']},
   {repo:'cache-lab', kind:'app', label:'TypeScript', title:'cache-lab: симулятор кэш-памяти процессора',
    text:'Адреса из трассы раскладываются по наборам и каналам на глазах, промахи делятся на обязательные, ёмкостные и конфликтные, две конфигурации считаются параллельно.',
    feats:['LRU, FIFO и Random, write-back и write-through','Трассы наивного и блочного умножения матриц','Настройки в ссылке, 15 тестов модели'],
    stack:['TypeScript','Canvas','node:test','GitHub Pages'], demo:true},
-  {repo:'asm-coreutils', kind:'devops', label:'Assembly · Linux', title:'cat, wc, hexdump и rev на ассемблере x86-64',
+  {repo:'asm-coreutils', kind:'system', label:'Assembly · Linux', title:'cat, wc, hexdump и rev на ассемблере x86-64',
    text:'Четыре утилиты Linux на чистом NASM: только системные вызовы, без libc. Вывод совпадает с GNU coreutils байт в байт.',
    feats:['Буферизованный ввод-вывод блоками по 64 КБ','Строки любой длины в куче через brk','54 сравнения с GNU coreutils в CI'],
    stack:['x86-64 Assembly','NASM','Linux syscalls','Make']},
@@ -260,7 +264,7 @@ const PROJECTS = [
    text:'Расширение на Manifest V3: на время помидора или по расписанию отвлекающие сайты открываются заглушкой с таймером. Статистика фокуса и попыток за неделю.',
    feats:['Блокировка через declarativeNetRequest, расписание через полночь','«Ещё 5 минут» с дневным лимитом','Демо в браузере с настоящей логикой, 26 тестов'],
    stack:['JavaScript','Chrome MV3','SVG','node:test'], demo:true},
-  {repo:'schemagen', kind:'devops', label:'Go · CLI', title:'SQL-схемы и миграции из YAML',
+  {repo:'schemagen', kind:'backend', label:'Go · CLI', title:'SQL-схемы и миграции из YAML',
    text:'Одна YAML-модель превращается в CREATE TABLE для PostgreSQL, MySQL и SQLite, а сравнение двух версий даёт up/down-миграции. Есть проверка модели и ER-диаграмма в Mermaid.',
    feats:['Миграции с предупреждениями об удалении данных, пересборка таблиц в SQLite','Ошибки с номером строки и подсказкой «did you mean»','В CI SQL применяется к живым PostgreSQL 16, MySQL 8.4 и SQLite'],
    stack:['Go','PostgreSQL','MySQL','SQLite','GitHub Actions']},
@@ -426,7 +430,7 @@ const PROJECTS = [
    text:'Десктоп-приложение: расходы по месяцам, категории, диаграмма и экспорт в CSV.',
    feats:['Диаграмма на Canvas','Хранилище покрыто тестами'], stack:['Python','Tkinter','SQLite']}
 ];
-const KINDS = {all:'Все', site:'Сайты', app:'Веб-приложения', game:'Игры', bot:'Боты', python:'Python', mobile:'Android', devops:'Серверы'};
+const KINDS = {all:'Все', site:'Сайты', app:'Веб-приложения', game:'Игры', bot:'Боты', python:'Python', backend:'Бэкенд', system:'Системное', mobile:'Android', devops:'Серверы'};
 let active = 'all';
 
 function render(){
