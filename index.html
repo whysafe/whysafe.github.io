@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'labirint-lab', kind:'app', label:'Алгоритмы', title:'Лабиринт-лаб: как алгоритмы ищут путь',
+   text:'Интерактивная визуализация A*, Дейкстры, жадного поиска, BFS и DFS на сетке со стенами и болотами. Лабиринты, перетаскивание старта и сравнение алгоритмов на одной карте.',
+   feats:['Алгоритмы-генераторы: одна реализация для анимации и тестов','Мгновенный пересчёт пути при рисовании','Тест сверяет A* с Дейкстрой на 40 случайных картах'],
+   stack:['JavaScript','Canvas','node:test'], demo:true},
   {repo:'react-finance-tracker', kind:'app', label:'React + TypeScript', title:'Бюджет, учёт доходов и расходов', wide:true,
    text:'SPA на React 18 и TypeScript в строгом режиме. Сборка Vite, автодеплой на GitHub Pages через Actions.',
    feats:['Компоненты, собственный хук useLocalStorage, строгая типизация','Итоги по месяцам, диаграмма категорий, удаление с отменой','Экспорт в CSV'],
