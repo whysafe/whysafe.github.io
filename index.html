@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'kino-analytics', kind:'backend', label:'SQL · PostgreSQL', title:'Аналитика онлайн-кинотеатра на PostgreSQL',
+   text:'Схема подписочного кинотеатра, генератор данных за год на чистом SQL и 12 запросов: когорты, отток, выручка, запойный просмотр, кого возвращать.',
+   feats:['Оконные функции, gaps-and-islands, percentile_cont, corr()','Воспроизводимые данные через setseed','18 проверок в CI на живом PostgreSQL 16'],
+   stack:['PostgreSQL','SQL','GitHub Actions']},
   {repo:'labirint-lab', kind:'app', label:'Алгоритмы', title:'Лабиринт-лаб: как алгоритмы ищут путь',
    text:'Интерактивная визуализация A*, Дейкстры, жадного поиска, BFS и DFS на сетке со стенами и болотами. Лабиринты, перетаскивание старта и сравнение алгоритмов на одной карте.',
    feats:['Алгоритмы-генераторы: одна реализация для анимации и тестов','Мгновенный пересчёт пути при рисовании','Тест сверяет A* с Дейкстрой на 40 случайных картах'],
