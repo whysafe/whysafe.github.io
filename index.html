@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'spica-velo', kind:'site', label:'Сайт · Сервис', title:'Спица, веломастерская',
+   text:'Сайт веломастерской, где клиент сам собирает список работ, видит цену и срок в квитанции, считает зимнее хранение и записывается на день.',
+   feats:['Калькулятор на 15 работ с коэффициентом по типу велосипеда','Автозамена работ на комплексное ТО, если так дешевле','Проверка телефона и даты записи, 15 тестов node:test'],
+   stack:['HTML','CSS','JavaScript','SVG'], demo:true},
   {repo:'dozor', kind:'backend', label:'Go · Мониторинг', title:'dozor: мониторинг и страница статуса',
    text:'Свой аналог UptimeRobot в одном бинарнике: проверяет сайты, API и порты, открывает инциденты после серии сбоев, пишет в Telegram и показывает публичную страницу статуса с историей за 90 дней.',
    feats:['HTTP, TCP, ключевое слово, медленный ответ и срок TLS-сертификата','Инциденты переживают перезапуск, дневная статистика в SQLite хранится всегда','JSON API, SVG-бейджи аптайма, Docker и systemd, CI запускает контейнер'],
