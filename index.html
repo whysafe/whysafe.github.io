@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'dozor', kind:'backend', label:'Go · Мониторинг', title:'dozor: мониторинг и страница статуса',
+   text:'Свой аналог UptimeRobot в одном бинарнике: проверяет сайты, API и порты, открывает инциденты после серии сбоев, пишет в Telegram и показывает публичную страницу статуса с историей за 90 дней.',
+   feats:['HTTP, TCP, ключевое слово, медленный ответ и срок TLS-сертификата','Инциденты переживают перезапуск, дневная статистика в SQLite хранится всегда','JSON API, SVG-бейджи аптайма, Docker и systemd, CI запускает контейнер'],
+   stack:['Go','SQLite','Telegram Bot API','Docker','GitHub Actions'], demo:true},
   {repo:'dezhurka', kind:'backend', label:'C# · .NET', title:'dezhurka: честный график дежурств',
    text:'Составляет график дежурств с учётом отпусков, дней недели, отдыха и лимитов, так что выходные и праздники делятся поровну. Экспорт в календарь .ics, CSV и Markdown.',
    feats:['Жадное распределение и локальный поиск с обменом сменами','Календарь по RFC 5545 со стабильными UID','Один исполняемый файл без установки .NET, 28 тестов xUnit'],
