@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'dubli', kind:'system', label:'C · CLI', title:'dubli: поиск дубликатов файлов',
+   text:'Консольная утилита на C без зависимостей: находит копии фото, загрузок и бэкапов, показывает, сколько места можно освободить, удаляет лишнее или заменяет копии жёсткими ссылками.',
+   feats:['Отбор: размер → хэш начала → полный хэш → побайтовое сравнение','Повторная проверка файла и атомарная замена ссылкой','Отчёты text, JSON и CSV, тесты под ASan и UBSan на Linux и macOS'],
+   stack:['C11','POSIX','Make','GitHub Actions']},
   {repo:'json2types', kind:'app', label:'Инструмент разработчика', title:'json2types',
    text:'Вставляете пример JSON и получаете интерфейсы TypeScript, структуры Go с тегами json или TypedDict для Python. Всё считается в браузере.',
    feats:['Необязательные поля и null по всем элементам массива','Имена типов в единственном числе, Go по правилам golint','Ошибки JSON с номером строки и столбца'],
