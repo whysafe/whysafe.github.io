@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'json2types', kind:'app', label:'Инструмент разработчика', title:'json2types',
+   text:'Вставляете пример JSON и получаете интерфейсы TypeScript, структуры Go с тегами json или TypedDict для Python. Всё считается в браузере.',
+   feats:['Необязательные поля и null по всем элементам массива','Имена типов в единственном числе, Go по правилам golint','Ошибки JSON с номером строки и столбца'],
+   stack:['JavaScript','TypeScript','Go','Python'], demo:true},
   {repo:'lapa-vet', kind:'site', label:'Сайт компании', title:'Лапа, ветеринарная клиника',
    text:'Сайт ветклиники с прайсом по видам животных, календарём прививок для котят и щенков и онлайн-записью на свободное время врача.',
    feats:['График прививок с датами обработки от глистов','Свободные слоты врачей на неделю','Памятка, когда к врачу нужно сегодня'],
