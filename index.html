@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>whysafe: разработчик сайтов, Telegram-ботов и игр</title>
-<meta name="description" content="Делаю сайты, Telegram-боты, парсеры и backend на Python. Москва, удалённо.">
+<title>whysafe: разработчик сайтов, ботов, игр и приложений</title>
+<meta name="description" content="whysafe: fullstack, системный и мобильный разработчик. Сайты, Telegram-боты, игры, бэкенд, Android, Linux. Python, Java, Kotlin, C, C++, C#, Go, Swift, Lua, Assembly, PostgreSQL, MySQL. Москва, удалённо.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -95,29 +95,85 @@ footer{color:var(--muted);font-size:.9rem;padding:2rem 0 3rem}
 }
 @media (max-width:520px){.services,.process{grid-template-columns:1fr}.services div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 .contact>*{min-width:0}.contact a{overflow-wrap:anywhere}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-top:2.2rem;color:var(--muted);font-size:.98rem}
+.facts b{color:var(--ink);font-size:1.5rem;font-weight:800;margin-right:.35rem;letter-spacing:-.02em}
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.about p{font-size:1.12rem;margin:0 0 1rem}
+.about p.muted{color:var(--muted);font-size:1rem}
+.card-info{background:#fff;border:1px solid var(--line);border-radius:20px;padding:1.2rem 1.5rem}
+.card-info div{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+.card-info div:last-child{border-bottom:0}
+.card-info span{color:var(--muted)}
+.card-info b,.card-info a{text-align:right;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.card-info a{color:var(--accent)}
+.card-info a:hover{text-decoration:underline}
+.techs{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.tgroup{border:1px solid var(--line);border-radius:20px;padding:1.3rem 1.4rem;background:#fff}
+.tgroup h3{font-size:1.05rem;margin:0 0 .25rem}
+.tgroup p{margin:0 0 .9rem;color:var(--muted);font-size:.92rem;line-height:1.45}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{display:inline-flex;align-items:center;gap:.45em;font:500 .9rem "Inter Tight",sans-serif;padding:.35em .75em;border-radius:999px;background:#F2F3F7;color:var(--ink);border:0}
+.chip i{width:.6em;height:.6em;border-radius:50%;background:var(--c,#999);flex:none}
+.chip sup{font-size:.72em;color:var(--accent);font-weight:700}
+button.chip{cursor:pointer}
+button.chip:hover{background:var(--accent-soft);color:var(--accent)}
+.tech-note{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.techbar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:-1rem 0 1.5rem;padding:.7rem 1rem;border-radius:14px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.techbar[hidden]{display:none}
+.techbar button{border:0;background:#fff;color:var(--accent);font:inherit;font-size:.9rem;padding:.3em .8em;border-radius:999px;cursor:pointer}
+@media (max-width:960px){.techs{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+@media (max-width:600px){.techs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav class="top"><span class="me">whysafe</span><div><a href="#experience">Опыт</a><a href="#work">Проекты</a><a href="#process">Как работаю</a><a href="#contact">Контакты</a></div></nav>
+  <nav class="top"><span class="me">whysafe</span><div><a href="#about">Обо мне</a><a href="#stack">Стек</a><a href="#work">Проекты</a><a href="#process">Как работаю</a><a href="#contact">Контакты</a></div></nav>
 
   <header class="hero">
     <span class="status">Беру новые проекты</span>
-    <h1>Делаю сайты, Telegram-боты и игры, которые работают на результат</h1>
-    <p>Fullstack и Unity-разработчик, на фрилансе с 2023 года. Делаю коммерческие проекты: от лендинга за три дня до бота с оплатой и админкой, а ещё браузерные игры для Яндекс Игр. Ниже проекты с кодом, которые можно открыть и потрогать: сайты, сервисы, игры, боты и автоматизация.</p>
+    <h1>Делаю сайты, ботов, игры и приложения, которые работают на результат</h1>
+    <p>Fullstack, системный и мобильный разработчик, на фрилансе с 2023 года. Делаю коммерческие проекты: от лендинга за три дня до бота с оплатой и админкой, бэкенд на Java, Go и Python, Android-приложения, игры на Unity и утилиты для Linux вплоть до ассемблера. Ниже проекты с кодом, которые можно открыть и потрогать.</p>
     <div class="cta">
       <a class="btn" href="#contact">Обсудить проект</a>
       <a class="btn alt" href="#work">Посмотреть работы</a>
     </div>
+    <div class="facts" id="facts"></div>
   </header>
 
   <div class="services">
     <div><b>Сайты</b><span>Лендинги, каталоги, интернет-магазины. Адаптив, быстрая загрузка.</span></div>
     <div><b>Telegram-боты</b><span>Запись клиентов, магазины, уведомления, админ-панель.</span></div>
-    <div><b>Python</b><span>Парсеры, API на FastAPI, автоматизация рутины.</span></div>
-    <div><b>Игры</b><span>HTML5 и Unity WebGL, публикация в Яндекс Играх.</span></div>
-    <div><b>Серверы</b><span>Деплой на VPS, Docker, домен, SSL, бэкапы.</span></div>
+    <div><b>Бэкенд и базы</b><span>Python, Java, Go, C#. PostgreSQL, MySQL, API и автоматизация.</span></div>
+    <div><b>Игры и мобильные</b><span>Unity, HTML5, Яндекс Игры. Android на Kotlin, iOS на Swift.</span></div>
+    <div><b>Linux и системное</b><span>Серверы, Docker, Bash, утилиты на C, C++ и Assembly.</span></div>
   </div>
+
+  <section id="about">
+    <div class="head"><h2>Обо мне</h2></div>
+    <div class="about">
+      <div>
+        <p>Меня зовут whysafe, я разработчик из Москвы и работаю удалённо. Начинал с сайтов и Telegram-ботов на заказ, потом ушёл глубже: бэкенд и базы данных, Android, игры на Unity, Linux и системное программирование.</p>
+        <p>Мне нравится, когда код понятен и проверен: почти у каждого проекта здесь есть тесты, CI на GitHub Actions и README с инструкцией запуска. Заказчику я отдаю не только результат, но и исходники с доступами.</p>
+        <p class="muted">Беру задачи от небольших доработок до проектов под ключ. Если задача не моя, скажу честно и подскажу, к кому обратиться.</p>
+      </div>
+      <div class="card-info">
+        <div><span>Где</span><b>Москва, удалённо</b></div>
+        <div><span>На фрилансе</span><b>с 2023 года</b></div>
+        <div><span>Отзывы</span><a href="https://kwork.ru/user/whysafe">140+ на Kwork</a></div>
+        <div><span>Telegram</span><a href="https://t.me/yawhysafe">@yawhysafe</a></div>
+        <div><span>Почта</span><a href="mailto:hello@whysafe.ru">hello@whysafe.ru</a></div>
+        <div><span>Сайт</span><a href="https://whysafe.ru">whysafe.ru</a></div>
+        <div><span>Код</span><a href="https://github.com/whysafe">github.com/whysafe</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" style="padding-top:0">
+    <div class="head"><h2>Стек</h2></div>
+    <div class="techs" id="techs"></div>
+    <p class="tech-note">Нажмите на технологию с цифрой, чтобы увидеть проекты с ней.</p>
+  </section>
 
   <section id="experience" hidden>
     <div class="head"><h2>Опыт</h2><a id="expLink" href="#" target="_blank" rel="noopener" hidden>Профиль с отзывами →</a></div>
@@ -131,6 +187,7 @@ footer{color:var(--muted);font-size:.9rem;padding:2rem 0 3rem}
       <h2>Проекты</h2>
       <div class="filters" id="filters" role="group" aria-label="Фильтр проектов"></div>
     </div>
+    <div class="techbar" id="techbar" hidden></div>
     <div class="projects" id="projects"></div>
   </section>
 
@@ -156,10 +213,11 @@ footer{color:var(--muted);font-size:.9rem;padding:2rem 0 3rem}
         <li><a href="mailto:hello@whysafe.ru">Почта <small>hello@whysafe.ru</small></a></li>
         <li><a href="https://kwork.ru/user/whysafe">Kwork <small>kwork.ru/user/whysafe</small></a></li>
         <li><a href="https://t.me/whysafe_official">Канал <small>@whysafe_official</small></a></li>
+        <li><a href="https://github.com/whysafe">GitHub <small>github.com/whysafe</small></a></li>
       </ul>
     </div>
   </section>
-  <footer>© 2026 whysafe</footer>
+  <footer>© 2026 whysafe · <a href="https://t.me/yawhysafe">Telegram</a> · <a href="mailto:hello@whysafe.ru">hello@whysafe.ru</a> · <a href="https://whysafe.ru">whysafe.ru</a></footer>
 </div>
 
 <script>
@@ -490,6 +548,44 @@ const PROJECTS = [
    text:'Десктоп-приложение: расходы по месяцам, категории, диаграмма и экспорт в CSV.',
    feats:['Диаграмма на Canvas','Хранилище покрыто тестами'], stack:['Python','Tkinter','SQLite']}
 ];
+// Стек. Третий элемент — как технология записана в stack у проектов (точно или с версией: «Java 21»)
+const TECH = [
+  {title:'Языки', note:'На чём пишу каждый день и для отдельных задач', items:[
+    ['Python','#3776AB'],['JavaScript','#F7DF1E'],['TypeScript','#3178C6'],['Java','#E76F00'],['Kotlin','#7F52FF'],
+    ['C','#A8B9CC',['C11']],['C++','#00599C'],['C#','#512BD4',['C# 12','C#']],['Go','#00ADD8'],['Swift','#F05138'],
+    ['PHP','#777BB4',['PHP 8','PHP']],['Lua','#2C2D72'],['Bash','#4EAA25'],['Assembly','#6E4C13',['x86-64 Assembly','NASM']],['SQL','#336791']]},
+  {title:'Мобильная разработка', note:'Нативные приложения под Android и iOS', items:[
+    ['Android Studio','#3DDC84',['Kotlin']],['Kotlin','#7F52FF'],['Jetpack Compose','#4285F4',['Jetpack Compose','Compose']],['Swift','#F05138'],['Coroutines','#7F52FF']]},
+  {title:'Базы данных', note:'Схемы, миграции, запросы и отчёты', items:[
+    ['PostgreSQL','#336791'],['MySQL','#4479A1'],['phpMyAdmin','#6C78AF'],['SQLite','#003B57'],['Flyway','#CC0200']]},
+  {title:'Бэкенд и веб', note:'API, сайты, админки и боты', items:[
+    ['Django','#092E20',['Django 5']],['FastAPI','#009688'],['Flask','#555'],['Spring Boot','#6DB33F',['Spring Boot 3']],
+    ['.NET','#512BD4',['.NET 8']],['React','#61DAFB',['React 18']],['aiogram','#2CA5E0',['aiogram 3']],['HTML и CSS','#E34F26',['HTML','CSS']]]},
+  {title:'Linux и серверы', note:'Дистрибутивы, настройка серверов и деплой', items:[
+    ['Linux','#FCC624',['Linux syscalls','POSIX','Ubuntu','systemd','Bash']],['Ubuntu','#E95420'],['Debian','#A81D33'],['Arch Linux','#1793D1'],
+    ['Docker','#2496ED'],['systemd','#30D475'],['Nginx и Caddy','#009639',['Caddy']],['GitHub Actions','#2088FF']]},
+  {title:'Игры и графика', note:'От HTML5-игр до Unity и эмуляторов', items:[
+    ['Unity','#222'],['C#','#512BD4',['C# 12','C#']],['Lua','#2C2D72'],['Canvas','#E34F26'],['Web Audio','#999'],['Yandex Games SDK','#FC3F1D']]},
+];
+const techMatch = ([name, , match]) => p => p.stack.some(s => (match || [name]).some(m => s === m || s.startsWith(m + ' ')));
+let activeTech = null;
+function renderTech(){
+  document.getElementById('techs').innerHTML = TECH.map((g, gi) => `<div class="tgroup"><h3>${g.title}</h3><p>${g.note}</p><div class="chips">${
+    g.items.map((t, ti) => {
+      const n = PROJECTS.filter(techMatch(t)).length;
+      return n ? `<button type="button" class="chip" style="--c:${t[1]}" data-tech="${gi}.${ti}" aria-label="${t[0]}: проектов ${n}"><i></i>${t[0]}<sup>${n}</sup></button>`
+               : `<span class="chip" style="--c:${t[1]}"><i></i>${t[0]}</span>`;
+    }).join('')}</div></div>`).join('');
+}
+document.getElementById('techs').addEventListener('click', e => {
+  const b = e.target.closest('[data-tech]'); if (!b) return;
+  const [gi, ti] = b.dataset.tech.split('.').map(Number);
+  activeTech = TECH[gi].items[ti]; active = 'all'; render();
+  document.getElementById('work').scrollIntoView({behavior:'smooth'});
+});
+const years = new Date().getFullYear() - 2023;
+document.getElementById('facts').innerHTML = `<span><b>${PROJECTS.length}</b>проектов с кодом</span><span><b>${TECH[0].items.length}</b>языков программирования</span><span><b>140+</b>отзывов на Kwork</span><span><b>${years}+</b>${years === 1 ? 'год' : years < 5 ? 'года' : 'лет'} на фрилансе</span>`;
+
 const KINDS = {all:'Все', site:'Сайты', app:'Веб-приложения', game:'Игры', bot:'Боты', python:'Python', backend:'Бэкенд', system:'Системное', mobile:'Android', devops:'Серверы'};
 let active = 'all';
 
@@ -498,7 +594,10 @@ function render(){
     const n = k === 'all' ? PROJECTS.length : PROJECTS.filter(p => p.kind === k).length;
     return `<button type="button" data-kind="${k}" aria-pressed="${k === active}">${v}<sup>${n}</sup></button>`;
   }).join('');
-  const list = PROJECTS.filter(p => active === 'all' || p.kind === active);
+  const list = PROJECTS.filter(p => (active === 'all' || p.kind === active) && (!activeTech || techMatch(activeTech)(p)));
+  const bar = document.getElementById('techbar');
+  bar.hidden = !activeTech;
+  if (activeTech) bar.innerHTML = `Проекты с ${activeTech[0]}: ${list.length}<button type="button" id="techReset">Показать все</button>`;
   document.getElementById('projects').innerHTML = list.map(p => `
     <article class="project ${p.wide && active === 'all' ? 'wide' : ''}">
       <span class="kind">${p.label}</span>
@@ -510,8 +609,12 @@ function render(){
     </article>`).join('');
 }
 document.getElementById('filters').addEventListener('click', e => {
-  const b = e.target.closest('[data-kind]'); if (b) { active = b.dataset.kind; render(); }
+  const b = e.target.closest('[data-kind]'); if (b) { active = b.dataset.kind; activeTech = null; render(); }
 });
+document.getElementById('techbar').addEventListener('click', e => {
+  if (e.target.id === 'techReset') { activeTech = null; render(); }
+});
+renderTech();
 render();
 </script>
 </body>
