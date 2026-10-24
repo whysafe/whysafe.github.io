@@ -204,6 +204,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'fotodubli', kind:'python', label:'Консольная утилита', title:'fotodubli',
+   text:'Находит одни и те же кадры в разных версиях: оригинал, копию из Telegram, пересжатый JPEG, скриншот в WebP. Предлагает, что оставить, и строит HTML-отчёт с миниатюрами.',
+   feats:['Перцептивный хеш (dHash) и поиск соседей через BK-дерево','Учёт поворота из EXIF и прозрачного фона','Перенос лишних копий с журналом и возвратом одной командой'],
+   stack:['Python','Pillow','pytest']},
   {repo:'dubli', kind:'system', label:'C · CLI', title:'dubli: поиск дубликатов файлов',
    text:'Консольная утилита на C без зависимостей: находит копии фото, загрузок и бэкапов, показывает, сколько места можно освободить, удаляет лишнее или заменяет копии жёсткими ссылками.',
    feats:['Отбор: размер → хэш начала → полный хэш → побайтовое сравнение','Повторная проверка файла и атомарная замена ссылкой','Отчёты text, JSON и CSV, тесты под ASan и UBSan на Linux и macOS'],
