@@ -262,6 +262,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'szhatie', kind:'system', label:'C++ · сжатие данных', title:'szhatie: gzip с нуля на C++20',
+   text:'Совместимый с gzip архиватор без zlib: LZ77, коды Хаффмана с ограничением длины, DEFLATE и CRC-32. GNU gzip распаковывает наши файлы, мы — его; размер в пределах 0.1–2.6 % от gzip.',
+   feats:['Package-merge для кодов не длиннее 15 бит, выбор лучшего из трёх типов блока','Проверка испорченных архивов, 500 случайных порч под ASan и UBSan','Сборка на GCC, MSVC и Clang, сверка с gzip в CI'],
+   stack:['C++','CMake','GoogleTest','GitHub Actions']},
   {repo:'raskladka.nvim', kind:'system', label:'Lua · плагин Neovim', title:'raskladka.nvim: ghbdtn → привет',
    text:'Плагин Neovim исправляет текст, набранный не в той раскладке: слово под курсором, выделение или последнее слово прямо в режиме вставки.',
    feats:['Знаки ,.;\'[] внутри латиницы считаются русскими буквами: k.,k. → люблю','В смешанном тексте правильные слова не трогаются','20 тестов на Lua 5.1, 5.4, LuaJIT и трёх версиях Neovim'],
