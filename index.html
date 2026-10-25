@@ -262,6 +262,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'raskladka.nvim', kind:'system', label:'Lua · плагин Neovim', title:'raskladka.nvim: ghbdtn → привет',
+   text:'Плагин Neovim исправляет текст, набранный не в той раскладке: слово под курсором, выделение или последнее слово прямо в режиме вставки.',
+   feats:['Знаки ,.;\'[] внутри латиницы считаются русскими буквами: k.,k. → люблю','В смешанном тексте правильные слова не трогаются','20 тестов на Lua 5.1, 5.4, LuaJIT и трёх версиях Neovim'],
+   stack:['Lua','Neovim','LuaJIT','GitHub Actions']},
   {repo:'rekvizit', kind:'mobile', label:'Swift · библиотека и CLI', title:'rekvizit: проверка ИНН, СНИЛС, БИК и счетов',
    text:'Swift-пакет и консольная утилита: проверяет российские реквизиты по контрольным суммам и объясняет, какая цифра не сошлась. Генерирует корректные тестовые номера для форм и тестов.',
    feats:['ИНН, ОГРН, ОГРНИП, СНИЛС, КПП, БИК, расчётный и корр. счёт, карта по Луну','Генератор с seed: счёт, который сойдётся с нужным БИК','Без Foundation, 13 тестов XCTest на Linux и macOS'],
