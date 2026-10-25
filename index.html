@@ -582,6 +582,13 @@ const TECH = [
     ['Docker','#2496ED'],['systemd','#30D475'],['Nginx и Caddy','#009639',['Caddy']],['GitHub Actions','#2088FF']]},
   {title:'Игры и графика', note:'От HTML5-игр до Unity и эмуляторов', items:[
     ['Unity','#222'],['C#','#512BD4',['C# 12','C#']],['Lua','#2C2D72'],['Canvas','#E34F26'],['Web Audio','#999'],['Yandex Games SDK','#FC3F1D']]},
+  {title:'Данные и ML', note:'Парсинг, отчёты и классические модели', items:[
+    ['scikit-learn','#F7931E'],['Pillow','#8CAAE6'],['BeautifulSoup','#4B8BBE'],['openpyxl','#217346'],['requests','#3776AB'],['FastAPI','#009688']]},
+  {title:'Десктоп и браузер', note:'Приложения, расширения и PWA', items:[
+    ['Swing','#E76F00'],['Tkinter','#3776AB'],['Chrome MV3','#4285F4'],['PWA','#5A0FC8'],['Service Worker','#5A0FC8'],['Neovim','#57A143']]},
+  {title:'Сборка и тесты', note:'Проекты собираются и проверяются в CI', items:[
+    ['CMake','#064F8C'],['Maven','#C71A36'],['SwiftPM','#F05138'],['Make','#6D00CC'],['GoogleTest','#4285F4'],['JUnit 5','#25A162'],
+    ['pytest','#0A9EDC'],['xUnit','#512BD4'],['XCTest','#147EFB'],['node:test','#339933'],['ShellCheck','#4EAA25']]},
 ];
 const techMatch = ([name, , match]) => p => p.stack.some(s => (match || [name]).some(m => s === m || s.startsWith(m + ' ')));
 let activeTech = null;
