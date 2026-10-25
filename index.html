@@ -262,6 +262,10 @@ const GH = location.hostname.endsWith('.github.io') ? location.hostname.split('.
 const repo = name => `https://github.com/${GH}/${name}`;
 const pages = name => `https://${GH}.github.io/${name}/`;
 const PROJECTS = [
+  {repo:'schetovod', kind:'system', label:'C++ · CLI', title:'schetovod: деньги в текстовом файле',
+   text:'Учёт доходов и расходов фрилансера в обычном текстовом журнале: проверка, что всё сходится, остатки деревом счетов, доходы по месяцам и налог самозанятого по месяцам со сроками уплаты.',
+   feats:['Точные суммы в int64 и 128-битное умножение на курс без double','НПД: вычет 10 000 ₽ на все годы, перенос налога до 100 ₽, лимит 2,4 млн','Обмен валюты через счёт обмена, курсовая разница при пересчёте'],
+   stack:['C++17','CMake','GoogleTest','GitHub Actions']},
   {repo:'fotodubli', kind:'python', label:'Консольная утилита', title:'fotodubli',
    text:'Находит одни и те же кадры в разных версиях: оригинал, копию из Telegram, пересжатый JPEG, скриншот в WebP. Предлагает, что оставить, и строит HTML-отчёт с миниатюрами.',
    feats:['Перцептивный хеш (dHash) и поиск соседей через BK-дерево','Учёт поворота из EXIF и прозрачного фона','Перенос лишних копий с журналом и возвратом одной командой'],
@@ -552,7 +556,7 @@ const PROJECTS = [
 const TECH = [
   {title:'Языки', note:'На чём пишу каждый день и для отдельных задач', items:[
     ['Python','#3776AB'],['JavaScript','#F7DF1E'],['TypeScript','#3178C6'],['Java','#E76F00'],['Kotlin','#7F52FF'],
-    ['C','#A8B9CC',['C11']],['C++','#00599C'],['C#','#512BD4',['C# 12','C#']],['Go','#00ADD8'],['Swift','#F05138'],
+    ['C','#A8B9CC',['C11']],['C++','#00599C',['C++17','C++']],['C#','#512BD4',['C# 12','C#']],['Go','#00ADD8'],['Swift','#F05138'],
     ['PHP','#777BB4',['PHP 8','PHP']],['Lua','#2C2D72'],['Bash','#4EAA25'],['Assembly','#6E4C13',['x86-64 Assembly','NASM']],['SQL','#336791']]},
   {title:'Мобильная разработка', note:'Нативные приложения под Android и iOS', items:[
     ['Android Studio','#3DDC84',['Kotlin']],['Kotlin','#7F52FF'],['Jetpack Compose','#4285F4',['Jetpack Compose','Compose']],['Swift','#F05138'],['Coroutines','#7F52FF']]},
